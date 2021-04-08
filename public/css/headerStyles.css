@@ -1,0 +1,162 @@
+@font-face {
+    font-family: HauserBoldItalic;
+    src: url('/fonts/Hauser Bold Italic.otf');
+}
+
+@font-face {
+    font-family: HauserCondensed;
+    src: url('/fonts/Hauser Condensed.otf');
+}
+
+@font-face {
+    font-family: HauserCondensedItalic;
+    src: url('/fonts/Hauser Condensed Italic.otf');
+}
+
+@font-face {
+    font-family: CooperHewitt;
+    src: url('/fonts/CooperHewitt-Medium.otf');
+}
+
+@font-face {
+    font-family: AlienEncounters;
+    src: url('/fonts/Alien-Encounters-Regular.ttf');
+}
+
+@font-face {
+    font-family: Streamster;
+    src: url('/fonts/Streamster.ttf');
+}
+
+/* Colour palette:
+
+Dark Lava:        #3a342c rgba(58, 52, 44, 1);
+Cultured:         #f5f5f5 rgba(245, 245, 245, 1);
+Aureolin:         #f9eb0f rgba(249, 235, 15, 1);
+Radical Red:      #ff2153 rgba(255, 33, 83, 1);
+Fluorescent Blue: #10e7e2 rgba(16, 231, 226, 1);
+*/
+
+body {
+    margin: 0;
+    background-color: #f5f5f5;
+    font-family: CooperHewitt;
+    min-width: 710px;
+}
+
+#navigation-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #3a342c;
+    z-index: 1;
+    box-shadow: 0 1px 1px #3a342c;
+    min-width: 710px;
+}
+
+#mod-logo {
+    height: 40px;
+    width: 100px;
+    background-color: white;
+}
+
+#title-one {
+    margin-left: 10px;
+    color: #f5f5f5;
+    font-family: AlienEncounters;
+    font-size: 28px;
+    line-height: 40px;
+}
+
+#title-two {
+    color: #f5f5f5;
+    font-family: Streamster;
+    font-size: 28px;
+    line-height: 40px;
+}
+
+#navigation-container p {
+    display: inline;
+    color: white;
+    height: 40px;
+    margin: 0 0 0 3px;
+    padding: 0;
+    line-height: 40px;
+    font-size: 24px;
+}
+
+#navbar {
+    width: 500px;
+    float: right;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 3px;
+}
+
+#navbar a {
+    width: 25%;
+    color: #f5f5f5;
+    font-family: HauserCondensed;
+    letter-spacing: 1px;
+    font-size: 22px;
+    text-align: center;
+    text-decoration: none;
+    height: 100%;
+    line-height: 40px;
+}
+
+#home {
+    border-left: 2px solid #f5f5f5;
+    background: linear-gradient(to right, #f5f5f5 50%, rgba(245, 245, 245, 0.15) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 0.3s ease;
+}
+
+#home:hover {
+    color: #3a342c;
+    background-position: left bottom;
+}
+
+#features {
+    border-left: 2px solid #f9eb0f;
+    background: linear-gradient(to right, #f9eb0f 50%, rgba(249, 235, 15, 0.15) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 0.3s ease;
+}
+
+#features:hover {
+    color: #3a342c;
+    background-position: left bottom;
+}
+
+#changelogs {
+    border-left: 2px solid #ff2153;
+    background: linear-gradient(to right, #ff2153 50%, rgba(255, 33, 83, 0.15) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 0.3s ease;
+}
+
+#changelogs:hover {
+    color: #3a342c;
+    background-position: left bottom;
+}
+
+#download {
+    border-left: 2px solid #10e7e2;
+    background: linear-gradient(to right, #10e7e2 50%, rgba(16, 231, 226, 0.15) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 0.3s ease;
+}
+
+#download:hover {
+    color: #3a342c;
+    background-position: left bottom;
+}

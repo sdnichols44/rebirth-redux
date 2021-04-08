@@ -1,0 +1,314 @@
+{{>header}}
+<div id='page-container'>
+    <div class='banner'>
+        <h1 class='banner-text-huge'>Changelogs</h1>
+        <div class='white'></div>
+        <div class='yellow'></div>
+        <div class='pink'></div>
+        <div class='blue'></div>
+        <div class='grey'></div>
+    </div>
+    <div>
+        <p>This is a full archive of all changelogs for every version of Rebirth: Redux released, even those I wrote for versions that were unavailable to anyone outside of TheFlamingRed's Discord server.</p>
+    </div>
+    <div class='small-banner'>
+        <h3 class='banner-text-small'>Rebirth: Redux v1.4</h3>
+    </div>
+    <div class='changelog-container'>
+        <textarea class='changelog' readonly>Rebirth Redux 1.4 Changelog:
+Adjustments:
+- AI will now check to see if any of the available dry weather compounds will get them to the end of the race at the pit stop, resulting in more intelligent choices when this is the case
+    - If no dry weather compound will get them to the end of the race, they will fall back to randomly selecting one, with an increasing bias towards the softest compound based on current race standings
+    - This results in an increase of difficulty in dry races as they will be more efficient, especially in 1-stop races as they will not make useless additional stops
+- AI will now check to see if any of the available dry weather compounds will get them to the next weather change, resulting in more intelligent choices
+    - If no dry weather compound will get them to the change in weather, they will fall back to randomly selecting one, with an increasing bias towards the softest compounmd based on current race standings
+    - This results in an increase of difficulty in changeable weather as they will be more efficient as they will not make useless additional stops
+    - This is also applied to race starts
+- Adjusted pit lane speed rules to 35mph and 50mph for slow and fast, respectively
+- Reduced base build times of all parts, across all series and tiers
+- Reduced maximum and minimum peak age, and maximum and minimum peak duration, slightly
+
+New Features/Additions:
+- None
+
+Bug Fixes:
+- None
+        </textarea>
+    </div>
+    <div class='small-banner'>
+        <h3 class='banner-text-small'>Rebirth: Redux v1.3</h3>
+    </div>
+    <div class='changelog-container'>
+        <textarea class='changelog' readonly>Rebirth Redux 1.3 Changelog:
+Adjustments:
+- Endurance now has far higher part repair times
+    - Minimum repair times have been doubled
+    - Maximum repair times have been quintupled
+- GT has increased repair times
+    - Minimum repair times have been doubled
+    - Maximum repair times have been tripled
+- GT now has specific retirement rates that are lower than single seaters, but higher than Endurance - this results in a higher chance that mechanical issues are repairable during the race
+- Endurance now has specific retirement rates that are lower than the other series - this results in a higher chance that mechanical issues are repairable during the race
+- Added small chance (3 in 100) of a pitstop mistake being a 'huge' mistake and will multiply mistake time by 1.8
+- Added small chance (9 in 100) of a pitstop mistake being a 'big' mistake and will multiply mistake time by 1.3
+- Endurance has a reduced chance due to the volume of pitstops being likely to trigger either statement too often
+- Small rebalance of GT tyres to allow various race strategies (needs testing to check balance)
+- Small rebalance of GT scalars to spread car performance over the car more evenly (needs testing to check balance)
+- Completed a thorough initial balancing of Endurance, from car performance to tyres to pit stops, everything has been looked at
+- Extended part development times for IECA (default x 2.6) and IECB (default x 1.8), which now completes the initial part development time extension for all series
+- Rebalanced starting part stats for IECB as they were originally too low and too close
+- Restored vanilla Dilemmas (I will be writing some new gameworld-friendly ones)
+
+New Features/Additions:
+- Day-Night cycle added for use with endurance races, complete with sky transition
+- Rule and code added to force Endurance to have fuel tanks that last roughly one hour
+    - Tracks at extremes with regards to lap distance and lap time will be over/under this. Milan and Dubai are the main culprits I have found so far
+    - I will be looking into a method to introduce a multiplier/adjuster for these tracks
+- 30 Dry Weather Tyres rule added for Endurance to facilitate the longer races
+- Experimental conditions added to the AI checks regarding changing tyres to (hopefully) get them to double and triple stint tyres in Endurance																			  
+
+Bug Fixes:
+- None
+        </textarea>
+    </div>
+    <div class='small-banner'>
+        <h3 class='banner-text-small'>Rebirth: Redux v1.2</h3>
+    </div>
+    <div class='changelog-container'>
+        <textarea class='changelog' readonly>Rebirth Redux Preview Build 2 Changelog:
+Adjustments:
+- 'Slipstream Expert' now uses the new 'CarAhead' special case
+- 'Bad at Slipstream' now uses the new 'CarAhead' special case
+- 'Overtake Specialist' now uses the new 'CarAhead' special case
+- Increased Critical Part time penalties in Single Seaters
+- Rebalanced all dry weather compounds for Single Seaters
+- AI will now use fast pit stops if their current position is lower than their expected position
+- Reduced 'Pay Driver' marketability debuff
+- Halved engine wear rates
+- Reduced engine modifier for instant failure calculations
+- Set point at which the AI will pit for engine repairs to 5% reliability or less
+
+New Features/Additions:
+- Added new 'Special Cases' for personality traits
+    - CarAhead
+    - CarBehind
+    - LastLap
+    - LastInRace
+- Added appropriate helper text for the new 'Special Cases'
+- Added new traits that use these new 'Special Cases'
+    - Tough Defender
+    - Pushover
+    - Tailgater
+    - Frustrated Follower
+    - Tunnel Vision
+    - Quitter
+    - Never Surrenders
+    - Early Leaver
+    - Chequered Chaser
+- Added new traits that make use of vanilla 'Special Cases'
+    - Lone Wolf
+    - Prefers Number Two
+    - Eager to Learn
+- Merged Rebirth 1.54 alpha code so the Rebirth teams now have loading screens
+- Added new penalty level - 5 second penalty
+- Rewrote code that awards penalties for more penalty variety
+    - All possible reasons for in-race penalties in non-endurance series (jump starts, corner cuts, and collisions) are now able to have either drive throughs or time penalties awarded
+    - There is a greater chance for time penalties over drive throughs
+- AI teams will now only get new liveries with layouts that are for their car model
+	
+Bug Fixes:
+- 'Track Practice' dilemma no longer instantly crashes the game
+- Yet another possible fix for 'Race Winner' and 'Podium' personality traits not spawning (I don't know how I broke these, honest!)
+- Added punctuation for 'Rude' personality trait
+- 'Pushover', 'Tailgater', and 'Frustrated Follower' personality traits now correctly set as opposites of 'Duel Master'
+- 'Tough Defender' personality trait now correctly set as opposite of 'Hates Duelling'
+- Fixed spelling error for the team 'Lagro Banco'
+- Broke and fixed 'Pay Driver', 'Dodgy Neck' and many other traits that use Special Cases
+- 'Offended' can now only spawn on drivers that are employed
+- Fixed typo in news report about driver 'looking for a way out' of a team
+- Corrected news report relating to the 'Resentful' personality trait
+        </textarea>
+    </div>
+    <div class='small-banner'>
+        <h3 class='banner-text-small'>Rebirth: Redux v1.1</h3>
+    </div>
+    <div class='changelog-container'>
+        <textarea class='changelog' readonly>Preview Build Version 1.1:
+Adjustments:
+- Reduced thresholds for instant failures
+- Increased probability of 'Race Winner' and 'Podium' traits being applied
+- 'Suspicious About Media Reports' now only rolls on drivers that have jobs
+
+Bug Fixes:
+- Fixed gamebreaking bug when rebrands were triggered
+- 'Struggles Under Pressure' now applies correctly
+- 'Whiplash' now correctly applies a morale penalty, rather than a marketability penalty
+- '{Tier} Champion' traits now set to remove the relevant 'Ex-{Tier} Champion' traits
+- 'Happy' now set to remove, and as the opposite of, 'Feeling Blue'
+- 'Failed Musician' now set as a follow-on trait from 'Releasing Album'
+- 'Qualifying Specialist' now has special text
+- Corrected a couple of typos in emails
+- Part Component ID119 now adds the correct amount of days to production time
+- Experimental fix for the flipped suspension feedback radio messages
+        </textarea>
+    </div>
+    <div class='small-banner'>
+        <h3 class='banner-text-small'>Rebirth: Redux v1.0</h3>
+    </div>
+    <div class='changelog-container'>
+        <textarea class='changelog' readonly>Rebirth Redux Preview Build Brief Changelog.
+
+NOTE: This is a preview build of an in-progress mod, therefore there will be issues, bugs and balancing issues. Please make sure you let Brian (the author) know of any issues you find, or any feedback you have.
+
+Outline of changes:
+
+===============
+  -:Assets:-
+===============
+
+==========================
+    Personality Traits
+==========================
+- Complete rewrite of Personality Traits.txt - this has been rebuilt from the vanilla txt, did a totally new balance pass for stat changes and trait durations. Removed redundant traits where appropriate.
+
+- There are no new traits currently, this is merely a re-write of an otherwise messy file and thos who mod it will likely see the most benefit
+
+================
+    Dilemmas
+================
+- Removed various Dilemmas that relied on traits that I have now cut (these were added with those traits, so technically nothing obvious has gone).
+
+=======================
+    Part Components
+=======================
+- The Part Component Overhaul has been added as a default now. As of this build, there are a total of 283 different part components in the pool. I have plans for some more to be added at a later date.
+
+=============
+    Parts
+=============
+- The Parts Base Costs rebalance has been added as a defualt now.
+
+- Lower tiers within a series (ERS, GTC, IEC-B) are cheaper to compete in than their vanilla counterparts, which creates a more competitive environment as teams are able to produce more parts in a season.
+
+- Higher tiers within a series (APS, WMC, IGTC, IEC-A) are more expensive to compete in putting an emphasis on bank balance, race performance and strategy as you progress, where the ability to keep a more healthy balance sheet is important to progression.
+
+- Base part build times have been increased across the board, this is a new feature so please report on balancing.
+
+================
+    Sponsors
+================
+- The Sponsor Rebalance is also implement as a default feature.
+
+- Rebalanced existing sponsor offers so the player is no longer obligated to chase 5-star sponsors at all times.
+
+- There is increased overlap between tiers which allows for the loss of a star rating without causing catastrophic financial losses.
+
+- The most lucrative offers are now worth more on a per race basis.
+
+- Added additional race placement sponsors with 3 - 5 star sponsors having an increased range of placement requirements.
+
+- This is then balanced by having a much larger pool of potential offers, with the largest offers being locked to specific slots to prevent them coming up too often.
+
+==================
+    DesignData
+==================
+- My SSDD and GT rebalances are also included as defaults. GT is to be largely rewritten though as it is legacy from pre-Endurance DLC and is technically redundant.
+
+- SSDD saw a small change to critical parts and time cost per single point of performance, and is therefore still undergoing testing.
+
+=================
+    Buildings
+=================
+- Increased the build time for all HQ buildings, and all upgrades, by 70%.
+
+==============
+    Driver
+==============
+- Experimental fix for all regen drivers peaking and declining very quickly. Assuming this works, regen drivers should now see their peaks in their early 30's at the earliest, and they have a chance to peak for longer before declining.
+
+=================
+    Locations
+=================
+- Reduced the chances for Safety Cars across all locations except Cape Town.
+
+====================
+    Rule Changes
+====================
+- Revised the pit lane speed rules down to 30mph and 65mph.
+
+=====================
+    Championships
+=====================
+- Built custom, relatively restricted, rulesets for singleseaters and GT. You may need to add this to the Phoenix Edition Workshop folder if you are using Phoenix.
+
+- This is considered a controversial component, however it is recommended you try it for this preview build to test balance. The aim is to make each tier more unique and prevent the player just bending every series to the most beneficial ruleset.
+
+================
+  -:Assembly:-
+================
+
+==================
+    Rebranding
+==================
+- Adapted Red's 1.54 rebranding code for 1.53 - Phoenix edition now has proper rebranding and new liveries every season for every team.
+
+- Reduced rebranding quantity vastly so that teams stick around for longer before being changed.
+
+==================
+    Promotions
+==================
+- Removed double promotions/teams being removed/added to series (hopefully) - this had too much scope for bugs, and there is no 1.54 version for me to adapt just yet, so this feature will have to be cut for now.
+
+======================
+    Condition Loss
+======================
+- Added the Instant Failures system - this is an expansion of Red's Random Failures and replaces the original part degradation system almost entirely. All parts will now have a chance to fail during the race depending on the part's current reliability. The engine uses a hybrid of both systems, where it takes regular part wear like it used to, but is also at risk of instant failure like any other part. The AI are made generally more competitive as a result and thus will give more a challenge.
+
+=============
+    Spins
+=============
+- Essentially disabled in this build - I will check the possiblity of merging 1.54 spins into Redux, but it relies on my ability, which is limited
+
+===============
+    Lockups
+===============
+- Increased the variety of lockup locations with this one easy trick
+
+================
+    AI Boost
+================
+- Reduced the volume of AI breakthroughs at the start of the season
+
+=========================
+    Part Reset Spread
+=========================
+- This is increased to 200, although with part production time increased, this may become less relevant
+
+=====================
+    Livery Change
+=====================
+- Decreased livery change cost to £10,000
+
+==================================
+    Regen Driver Marketability
+==================================
+- Reduced the range of regen driver base marketability to a maximum of 50%
+
+=========================
+    Chairman Payments
+=========================
+- Increased chairman payments for APS and WMC, these are old changes from previous attempts to balance the economy, and may now be redundant.
+
+========================
+    Retirment Chance
+========================
+- With the introduction of the Instant Failures feature, chance to retire rather than have mechanical issues has been increased
+
+=====================
+    Moe's AI Work
+=====================
+- This is integrated into this DLL, as this version is built from his version of Rebirth which I had merely made my own adjustments to in the past.
+        </textarea>
+    </div>
+</div>
+{{>footer}}
