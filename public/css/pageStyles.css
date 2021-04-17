@@ -116,13 +116,13 @@ Fluorescent Blue: #10e7e2 rgba(16, 231, 226, 1);
     font-size: 24px;
 }
 
-/* Styles for index*/
 #overview-text {
     font-family: CooperHewitt;
     width: 87%;
     margin: 15px auto;
 }
 
+/* Styles for index*/
 #screenshot {
     width: 70%;
     margin: 0 auto;
@@ -135,10 +135,6 @@ Fluorescent Blue: #10e7e2 rgba(16, 231, 226, 1);
 }
 
 /* Styles for features */
-p {
-    width: 85%;
-    margin: 0 auto 15px;
-}
 
 ul {
     width: 85%;
@@ -161,6 +157,12 @@ ul {
 }
 
 /* Styles for download */
+.general-text-downloads {
+    font-family: CooperHewitt;
+    width: 87%;
+    margin: 15px auto;
+}
+
 #link-container {
     display: flex;
     justify-content: center;
@@ -191,6 +193,4 @@ ul {
 
 h3 {
     width: 85%;
-    margin-left: auto;
-    margin-right: auto;
 }
