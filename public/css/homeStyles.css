@@ -1,0 +1,26 @@
+/* Colour palette:
+Dark Lava:        #3a342c rgba(58, 52, 44, 1);
+Cultured:         #f5f5f5 rgba(245, 245, 245, 1);
+Aureolin:         #f9eb0f rgba(249, 235, 15, 1);
+Radical Red:      #ff2153 rgba(255, 33, 83, 1);
+Fluorescent Blue: #10e7e2 rgba(16, 231, 226, 1);
+*/
+#page-container {
+  margin: 60px auto 0;
+  width: 80%;
+}
+#page-container #overview-text {
+  width: 87%;
+  margin: 15px auto;
+}
+#page-container #screenshot {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+#page-container #screenshot img {
+  max-width: 75%;
+  height: auto;
+}
+
+/*# sourceMappingURL=homeStyles.css.map */

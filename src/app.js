@@ -12,36 +12,40 @@ hbs.registerPartials(path.join(__dirname, '../templates/partials'));
 // Setup static directory to serve
 app.use(express.static(path.join(__dirname, '../public')));
 
-
 app.get('', (req, res) => {
     res.render('index', {
-        titleSuffix: '- Home'
+        titleSuffix: '- Home',
+        stylesheetNameFragment: 'home'
     });
 });
 
 app.get('/features', (req, res) => {
     res.render('features', {
-        titleSuffix: '- Features'
+        titleSuffix: '- Features',
+        stylesheetNameFragment: 'features'
     });
 });
 
 app.get('/changelogs', (req, res) => {
     res.render('changelogs', {
-        titleSuffix: '- Changelogs'
+        titleSuffix: '- Changelogs',
+        stylesheetNameFragment: 'changelogs'
     });
 });
 
 app.get('/download', (req, res) => {
     res.render('download', {
-        titleSuffix: '- Download'
+        titleSuffix: '- Download',
+        stylesheetNameFragment: 'download'
     });
 });
 
 app.get('*', (req, res) => {
     res.render('404', {
-        titleSuffix: '- 404 to Nowhere'
-    })
-})
+        titleSuffix: '- 404 to Nowhere',
+        stylesheetNameFragment: '404'
+    });
+});
 
 app.listen(process.env.PORT || 3000, () => {
     console.log('Server is running');
