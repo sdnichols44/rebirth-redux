@@ -38,12 +38,14 @@ body {
   z-index: 1;
   box-shadow: 0 1px 1px #3a342c;
   min-width: 710px;
+  display: flex;
+  justify-content: space-between;
 }
 
-#mod-logo {
-  height: 40px;
-  width: 100px;
-  background-color: white;
+#logo-name-container {
+  width: 25%;
+  display: flex;
+  align-items: center;
 }
 
 #title-one {

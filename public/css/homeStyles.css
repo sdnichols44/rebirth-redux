@@ -9,6 +9,10 @@ Fluorescent Blue: #10e7e2 rgba(16, 231, 226, 1);
   margin: 60px auto 0;
   width: 80%;
 }
+#page-container #main-logo {
+  margin: 0 auto;
+  display: block;
+}
 #page-container #overview-text {
   width: 87%;
   margin: 15px auto;
