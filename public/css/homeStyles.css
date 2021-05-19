@@ -6,7 +6,7 @@ Radical Red:      #ff2153 rgba(255, 33, 83, 1);
 Fluorescent Blue: #10e7e2 rgba(16, 231, 226, 1);
 */
 #page-container {
-  margin: 60px auto 0;
+  margin: 40px auto 0;
   width: 80%;
 }
 #page-container #main-logo {
