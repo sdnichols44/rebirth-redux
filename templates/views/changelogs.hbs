@@ -12,6 +12,72 @@
         <p>This is a full archive of all changelogs for every version of Rebirth: Redux released, even those I wrote for versions that were unavailable to anyone outside of TheFlamingRed's Discord server.</p>
     </div>
     <div class='small-banner'>
+        <h3 class='banner-text-small'>Rebirth: Redux v1.5</h3>
+    </div>
+    <div class='changelog-container'>
+        <textarea class='changelog' readonly>Rebirth Redux 1.5 Changelog:
+
+[Personality Traits]
+- 'Refocused' now only gives +10 Focus and +10 Improvability. It also boosts experience gain by 30%
+- 'Renewed Passion' now only gives +10 Potential, +10 Morale and +10 Improvability. It also boosts experience gain by 30%
+
+[Teams]
+- Rebirth teams have adjusted colour palettes for their liveries to help make them more visually distinctive on track - 65 have been completed so far, 1 remaining
+- Rebirth teams have adjusted UI colour palettes to help make them more visually distinctive generally - 65 completed so far, 1 remaining
+
+[Drivers]
+- Regen drivers will now only spawn with a maximum base marketability of 33%
+- Regen drivers will now only spawn with a maximum base experience of 25
+- Large expansion of the basic driver experience system from Rebirth. It is now a representation of both their experience as a driver, and their experience in that season's car
+    - Experience is a value from 0 to 100, to one decimal place
+    - 100 experience drivers will have a 0.5s boost to pace (this will be expanded further in future versions)
+	- Drivers will gain a base amount of experience when they participate in a session, including reserves who just participate in practice
+		- Reserves who only participate in practice are capped at 50 experience - they will only be able to reach 100 by actually racing
+	- This gain is then modified by the following:-
+		- Age
+		- Finishing position
+		- Specific HQ buildings
+			- Test Track (+2%, +5%, +10%)
+			- Telemetry Centre (+2%, +5%, +10%)
+			- Simulator (+5%, +10%, +20%)
+		- Personality Traits
+		- Current experience
+	- The average season form display on the driver page has been replaced with their current experience level, and you will not be able to see an unscouted driver's experience level
+	- Experience will drop at the start of each season, for every employed driver over 80 experience, by 5 + 0.5 x (20 - Adaptability) to represent the driver needing to get used to the new car
+		- Lower Adaptability will give a larger penalty, and thus may take longer for the driver to get up to speed each season
+		- Drivers are capped to a minimum of 80 experience under this system
+		
+[Single Seater Design Data]
+- Reduced critical part time cost to a range of 0.9 seconds per lap to reduce the power of min-max'ing
+- Doubled scalar values to increase base field spread
+- Reduced bonus and penalty laps on tyres from driver Smoothness
+- Increased number of potential pit crew applicants to 12, reduced auto-reject time to 2 races
+
+[AI Logic]
+- Rewrote AI pit logic when the Safety Car comes out
+	- Currently for Single Seaters only
+	- I have broken down the rules for pitting by fuel tank size if refuelling is active
+	- If no fuel levels trigger a pit stop, they will then check their tyres to see if they are sufficiently worn, or if a new tread is required in the next few laps
+	- This is a work in progress, and will likely require some adjustments and additions to make the system work efficiently
+	- The AI will check 4 laps ahead of the current lap when selecting a tyre
+- Rewrote some sections of AI logic that handles when they want to pit
+	- The AI will take a better look at changeable weather and should now be better at reacting to sudden weather changes (e.g. slicks to wets in 3 or 4 laps)
+	- The AI will be more likely to use all of their fuel each stint when refuelling is active and take note of where their teammate is and how much fuel they have to prevent pointless double stacking or running out of fuel (this still happens sometimes, I am playtesting extensively to try and catch more cases)
+	- This is part of the larger plan to make the AI more potent on race day, as they were very weak here previously
+- Rewrote AI logic for deciding how much fuel to put in at the pitstops
+- Fixed the AI always using the softest compound when it was going to rain midrace, even if that tyre would not reach the weather change.
+
+[Other]
+- Rewrote and refactored day/night cycle code so it works in every session and every series, and uses less performance
+- Changed text around the form display to now relate to experience
+- Added passive AI part development boost - the effectiveness of this boost will be based on the AI Driver Difficulty slider position. 20 will give the AI a 100% boost on all developed parts. This is purely to offer players a challenge if they find themselves getting too far ahead or progressing too quickly
+    - Recommended to set at 10, and adjust from there
+- Reduced strength of start quality, great starts are less powerful, poor starts are less punishing
+- Reduced chances of a car experiencing a sudden failure at each deg step
+- Increase the maximum possible 'deg steps' for a race session, these now range from 8 to 14, inclusive
+        </textarea>
+    </div>
+    <div class='small-banner'>
         <h3 class='banner-text-small'>Rebirth: Redux v1.41</h3>
     </div>
     <div class='changelog-container'>
@@ -191,12 +257,12 @@ Outline of changes:
 ==========================
 - Complete rewrite of Personality Traits.txt - this has been rebuilt from the vanilla txt, did a totally new balance pass for stat changes and trait durations. Removed redundant traits where appropriate.
 
-- There are no new traits currently, this is merely a re-write of an otherwise messy file and thos who mod it will likely see the most benefit
+- There are no new traits currently, this is merely a re-write of an otherwise messy file and those who mod it will likely see the most benefit
 
 ================
     Dilemmas
 ================
-- Removed various Dilemmas that relied on traits that I have now cut (these were added with those traits, so technically nothing obvious has gone).
+- Removed various Dilemmas that relied on traits that I have now cut (these were added with those traits, so nothing obvious has gone).
 
 =======================
     Part Components
