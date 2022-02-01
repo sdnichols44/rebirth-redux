@@ -12,6 +12,82 @@
         <p>This is a full archive of all changelogs for every version of Rebirth: Redux released, even those I wrote for versions that were unavailable to anyone outside of TheFlamingRed's Discord server.</p>
     </div>
     <div class='small-banner'>
+        <h3 class='banner-text-small'>Rebirth: Redux v1.51</h3>
+    </div>
+    <div class='changelog-container'>
+        <textarea class='changelog' readonly>Rebirth Redux 1.51 Changelog:
+
+[Endurance Design Data]
+- Increased wrong weather penalties for all tyre compounds
+- Increased maximum number of pit crew applicants to 12
+- Reduced pit crew applicant auto-reject time to 2 races
+
+[Drivers]
+- Reduced maximum time cost for 0 experience to 0.5s
+- Reduced the maximum and minimum peak age for regen drivers (again)
+- Drivers with more than 60 experience can no longer be hired to drive in ERS
+
+[AI Logic]
+- [Singleseaters] Improved tyre selection at race start if the rain was coming at, or just over, the range of the softest compound
+- [Singleseaters] Created new logic for AI driver driving style selection
+	- They will now try to claim back some tyre life on a tyre that could reach the end of the race but marginally falls short
+	- They will now not overdrive a tyre and fall short of the end of the race
+	- They will actively use any spare tyre life available, but leave some left over for other uses
+	- They will now actively attack cars ahead if they have the tyre life available
+	- They will now actively defend against cars using Attack if they have the tyre life available
+	- If no other condition is met, they will use Medium
+- [Singleseaters] Created new logic for AI driver engine mode selection when refuelling is active
+	- They will now try to save fuel when they are 1.2 laps or fewer short of the end of the race
+	- They will now try to burn extra fuel if they are expected to finish higher than their teammate, and they have the same fuel load as their teammate to help alleviate double stacking
+	- They will now turn the engine up to defend if the attacker is using Overtake and they have the spare fuel available
+	- They will now turn the engine up to attack, using Overtake or High depending on how much extra fuel they have available
+	- They will now burn any extra fuel they have compared to the tyre life or laps remaining (whichever is lower) when they are doing none of the above
+	- If no other condition is met, they will use Medium (this can make them extend fuel an extra lap if it's a sufficiently long stint on a harder tyre)
+- [Endurance] Added new logic for tyre selection
+	- The AI will now decide if they wish to make a driver swap before doing anything else
+	- If they are changing driver, they will change tyres as well
+	- They will then select a tyre based on how long the incoming driver can run for
+- [Endurance] Added statement to trigger refuelling when the safety car comes out
+- [Endurance] Created new logic for AI driver driving style selection
+	- They will push on the tyres if they have just come out of the pits
+	- They will push on the tyres for the first few laps of a race, based on team aggression
+	- They will push on the tyres to defend if the driver behind is using Attack
+	- The leading car will go easy on their tyres if they are a sufficient distance ahead
+	- They will push on the tyres to attack a car ahead
+	- If no other condition is met, they will use Neutral
+- [Endurance] Created new logic for AI driver engine mode selection
+	- They will turn the engines up for a specific amount of laps at race start, limited by driver aggression
+	- They will try to fuel save if their fuel doesn't quite reach the end of the race
+	- The car with the higher expected finish within a team will burn off extra fuel to create a 2 lap fuel delta to their teammate to stagger their pitstops
+	- They will turn the engine up if the fuel they have exceeds the laps remaining in the race + 3
+	- They will turn the engine up to defend if the fuel they have exceeds the laps remaining in the race + 1
+	- They will turn the engine up to attack if the fuel they have exceeds the laps remaining in the race + 1
+	- They will turn the engine down if they are close to an extra lap of fuel (if they are at X.84 fuel laps remaining when they cross the line, they will turn the engine down until it's at X.00)
+	- If no other condition is met, they will use Medium
+- [Endurance] Restored original engine mode fuel burn values
+- [Singleseaters & Endurance] Rewrote custom method that calculated how much fuel was required in changeable weather
+- [Singleseaters & Endurance] Reworked dry weather logic for the AI deciding when to pit to help prevent needless double-stacking
+
+[Other]
+- Maximum overall team marketability is now capped depending on which series a team is competing in
+	- 2 stars - ERS, GTC
+	- 3 stars - APSC, IEC-B
+	- 4 stars - IGTC, IEC-A
+	- 5 stars - WMC
+- [Endurance] Stamina loss per second should now be normalised for all race lengths
+- [Endurance] Car headlights will now turn off while they are sitting in the pits, and turn on again upon leaving
+- [Endurance] Headlights will now always be on while the car is moving
+- The tyre temperature mechanic has been reworked:
+	- Neutral driving style will make the tyre temperature return to 50% over time - this is to imply the driver is simply keeping the tyre well within the working range, regardless of location
+		- The speed of this is half of Conserve or Push
+		- It is affected by ambient temperature as normal
+		- Once tyre temperature gets to 50%, it will remain there as long as Neutral is used
+		- This has been done for two main reasons:
+			- The AI will benefit from this when the race is very hot, or very cold
+			- There is a large reduction in required micromanagement at very hot or very cold races for the player
+        </textarea>
+    </div>
+    <div class='small-banner'>
         <h3 class='banner-text-small'>Rebirth: Redux v1.5</h3>
     </div>
     <div class='changelog-container'>
